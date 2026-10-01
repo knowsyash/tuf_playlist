@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: var(--font-geist-sans), 'Inter', system-ui, sans-serif;
+}
+
+/* Table */
+table { border-collapse: collapse; width: 100%; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.25); }
+
+/* Progress bar fill animation */
+@keyframes fill-bar {
+  from { width: 0; }
+}
+
+/* Number count-up */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.3s ease forwards; }
+
+/* Subtle border shimmer on hover */
+.step-card {
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.step-card:hover { border-color: rgba(255,255,255,0.18) !important; }
