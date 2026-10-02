@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { TrackerProvider } from "@/lib/tracker-context";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Providers>
           <TrackerProvider>{children}</TrackerProvider>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
